@@ -1,0 +1,50 @@
+{
+    "servers": [],
+    "admins": [],
+    "ignoredchats": [],
+    "prefixes": [
+        "?",
+        "!",
+        "."
+    ],
+    "logchats": [],
+    "monitor": {
+        "servers": {
+            "us46": [
+                {
+                    "alliances": [
+                        1547,
+                        301,
+                        256,
+                        4
+                    ],
+                    "platform": "skype",
+                    "chatname": "#us.grepo/$af63eeb34358462"
+                }
+            ],
+            "us50": [
+                {
+                    "alliances": [
+                        1341,
+                        1131,
+                        740,
+                        862,
+                        1201,
+                        1543
+                    ],
+                    "platform": "skype",
+                    "chatname": "#us.grepo/$bfa07f64b369b5bf"
+                },
+                {
+                    "alliances": [
+                        191,
+                        481
+                    ],
+                    "platform": "skype",
+                    "chatname": "#us.grepo/$af63eeb34358462"
+                }
+            ]
+        },
+        "lastrun": 1461182712
+    }
+}
