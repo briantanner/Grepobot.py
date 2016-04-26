@@ -1,6 +1,5 @@
 import requests
 import json
-from stuf import stuf
 
 class JSONObject:
 	def __init__(self, d):

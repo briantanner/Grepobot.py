@@ -7,7 +7,13 @@ class Ping(Command):
 		self._doc = "Pings the bot"
 		self._usage = "{prefix}ping"
 
-	def execute(self, Message, args):
+	def execute(self, msg, settings, args):
+		# sleep used in debugging, test threading/concurrency
 		if args and args[0] == 'sleep':
+			m = msg.Chat.SendMessage("Sleeping...")
 			sleep(10)
-		Message.Chat.SendMessage('Pong!')
+		else:
+			m = msg.Chat.SendMessage("Pong")
+			return
+
+		m.Body = "Pong!"

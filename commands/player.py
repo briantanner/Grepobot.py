@@ -15,8 +15,12 @@ class Player(Command):
 		self._doc = "Get player stats"
 		self._usage = "{prefix}player us22 NoobLance"
 	
-	def execute(self, Message, args):
+	def execute(self, msg, settings, args):
+		m = msg.Chat.SendMessage('Fetching player stats...')
+		
+		# make api request
 		url = '/{server}/player/{player}'.format(server=args[0], player=quote(' '.join(args[1:]).replace(" ", "+")))
 		player = api.request(url)
-
-		Message.Chat.SendMessage(Formatter.format_player(player))
+		
+		# update message with player stats
+		m.Body = "{code}" + Formatter.format_player(player) + "{code}"
